@@ -1,0 +1,23 @@
+
+Lua-Batteries on Parrot
+=======================
+
+This is the port of many libraries for Lua on Parrot
+(http://github.com/fperrad/lua).
+
+Build & Install
+---------------
+
+From source :
+    $ parrot setup.pir
+    $ parrot setup.pir test
+    $ sudo parrot setup.pir install
+
+Via Plumage :
+    $ plumage install lua-batteries
+
+Links
+-----
+
+The project is hosted at http://github.com/fperrad/lua-batteries/.
+
