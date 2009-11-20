@@ -5,7 +5,7 @@
     },
     "general"      : {
         "name"     : "lua-batteries",
-        "abstract" : "libraries for Lua on Parrot",
+        "abstract" : "Libraries for Lua on Parrot",
         "authority": "http://github.com/fperrad",
         "version"  : "HEAD",
         "license"  : {
@@ -14,7 +14,7 @@
         },
         "copyright_holder" : "Parrot Foundation",
         "generated_by"     : "Francois Perrad <francois.perrad@gadz.org>",
-        "keywords"         : ["random", "prng"],
+        "keywords"         : ["lua"],
         "description"      : "This is the port of many libraries for Lua on Parrot."
     },
     "instructions" : {
@@ -35,9 +35,8 @@
         "provides"     : ["lua-baterries"],
         "requires"     : {
             "fetch"    : ["git"],
-            "configure": [],
-            "build"    : [],
-            "test"     : ["perl5"],
+            "build"    : ["lua"],
+            "test"     : ["lua", "perl5"],
             "install"  : [],
             "runtime"  : ["lua", "mt19937", "markdown"]
         }
