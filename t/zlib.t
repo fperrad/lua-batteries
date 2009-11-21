@@ -1,12 +1,5 @@
 #! /usr/bin/lua
---
--- lua-TestMore : <http://testmore.luaforge.net/>
---
--- Copyright (C) 2009, Perrad Francois
---
--- This code is licensed under the terms of the MIT/X11 license,
--- like Lua itself.
---
+-- Copyright (C) 2009, Parrot Fondation.
 
 --[[
 
