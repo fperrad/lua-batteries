@@ -5,3 +5,9 @@ lua/library/sha1.pir
 
 Test/More.pbc
 Test/More.pir
+
+*.iss
+setup-*.exe
+
+*.tar.gz
+*.patch
