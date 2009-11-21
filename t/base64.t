@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/base64.t
+    % prove t/base64.t
 
 =head2 Description
 

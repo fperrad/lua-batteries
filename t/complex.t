@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/complex.t
+    % prove t/complex.t
 
 =head2 Description
 

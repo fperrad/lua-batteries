@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/zlib.t
+    % prove t/zlib.t
 
 =head2 Description
 

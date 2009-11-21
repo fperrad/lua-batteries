@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % perl t/mathx.t
+    % prove t/mathx.t
 
 =head2 Description
 

@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/sha1.t
+    % prove t/sha1.t
 
 =head2 Description
 

@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/struct.t
+    % prove t/struct.t
 
 =head2 Description
 

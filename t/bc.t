@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/bc.t
+    % prove t/bc.t
 
 =head2 Description
 

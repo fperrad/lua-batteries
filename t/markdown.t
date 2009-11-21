@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/markdown.t
+    % prove t/markdown.t
 
 =head2 Description
 

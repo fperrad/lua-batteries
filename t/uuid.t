@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/uuid.t
+    % prove t/uuid.t
 
 =head2 Description
 

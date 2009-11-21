@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/lpeg.t
+    % prove t/lpeg.t
 
 =head2 Description
 

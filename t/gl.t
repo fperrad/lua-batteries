@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/gl.t
+    % prove t/gl.t
 
 =head2 Description
 

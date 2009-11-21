@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/md5.t
+    % prove t/md5.t
 
 =head2 Description
 

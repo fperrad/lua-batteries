@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/random.t
+    % prove t/random.t
 
 =head2 Description
 

@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/alarm.t
+    % prove t/alarm.t
 
 =head2 Description
 

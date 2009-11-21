@@ -14,7 +14,7 @@
 
 =head2 Synopsis
 
-    % prove lib/bit.t
+    % prove t/bit.t
 
 =head2 Description
 
