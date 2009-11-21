@@ -29,6 +29,20 @@ No Configure step, no Makefile generated.
     register_step_before('clean', clean)
 
     $P0 = new 'Hash'
+    $P0['name'] = 'Lua-Batteries'
+    $P0['abstract'] = 'Libraries for Lua on Parrot'
+    $P0['authority'] = 'http://github.com/fperrad'
+    $P0['description'] = 'This is the port of many libraries for Lua on Parrot.'
+    $P5 = split ',', 'lua'
+    $P0['keywords'] = $P5
+    $P0['license_type'] = 'Artistic License 2.0'
+    $P0['license_uri'] = 'http://www.perlfoundation.org/artistic_license_2_0'
+    $P0['copyright_holder'] = 'Parrot Foundation'
+    $P0['generated_by'] = 'Francois Perrad <francois.perrad@gadz.org>'
+    $P0['checkout_uri'] = 'git://github.com/fperrad/lua-batteries.git'
+    $P0['browser_uri'] = 'http://github.com/fperrad/lua-batteries'
+    $P0['project_uri'] = 'http://github.com/fperrad/lua-batteries'
+
     # build
     $P1 = new 'Hash'
     $P1['lua/library/gl.pir'] = 'lua/library/gl.lua'

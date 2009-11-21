@@ -32,7 +32,7 @@
         }
     },
     "dependency-info"  : {
-        "provides"     : ["lua-baterries"],
+        "provides"     : ["lua-batteries"],
         "requires"     : {
             "fetch"    : ["git"],
             "build"    : ["lua"],
