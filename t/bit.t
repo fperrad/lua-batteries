@@ -26,7 +26,7 @@ Tests bit
 
 require 'Test.More'
 
-plan(7)
+plan(9)
 
 if not require_ok 'bit' then
     skip_rest "no lib"
@@ -43,6 +43,18 @@ is( bit.bor(1,2,4,8,16,32,64,128), 255, "bit.bor" )
 
 is( bit.bswap(0x12345678), 0x78563412, "bit.bswap" )
 is( bit.bswap(0x9ABCDEF0), 0xF0DEBC9A)
+
+local r, msg = pcall(dofile, 't/bit/bittest.lua')
+ok( r, "bittest" )
+if not r then
+    diag(msg)
+end
+
+local r, msg = pcall(dofile, 't/bit/nsievebits.lua')
+ok( r, "nsievebits" )
+if not r then
+    diag(msg)
+end
 
 -- Local Variables:
 --   mode: lua
