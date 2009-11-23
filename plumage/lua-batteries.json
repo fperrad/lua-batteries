@@ -13,7 +13,7 @@
             "uri"  : "http://www.perlfoundation.org/artistic_license_2_0"
         },
         "copyright_holder" : "Parrot Foundation",
-        "generated_by"     : "Francois Perrad <francois.perrad@gadz.org>",
+        "generated_by"     : "distutils",
         "keywords"         : ["lua"],
         "description"      : "This is the port of many libraries for Lua on Parrot."
     },
