@@ -1,4 +1,6 @@
 
+MANIFEST
+
 lua/library/*.pbc
 lua/library/gl.pir
 lua/library/sha1.pir
@@ -10,4 +12,5 @@ Test/More.pir
 setup-*.exe
 
 *.tar.gz
+*.zip
 *.patch
