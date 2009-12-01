@@ -106,10 +106,8 @@ LIBS
     $P0['inst_lang'] = $P3
 
     # dist
-    $P4 = split ' ', 'lua/library/gl.lua Test/More.lua'
-    $P0['manifest_includes'] = $P4
-    $P5 = split ' ', 'lua/library/sha1.pir lua/library/gl.pir Test/More.pir'
-    $P0['manifest_excludes'] = $P5
+    $P0['manifest_includes'] ='lua/library/gl.lua Test/More.lua'
+    $P0['manifest_excludes'] = 'lua/library/sha1.pir lua/library/gl.pir Test/More.pir'
 
     .tailcall setup(args :flat, $P0 :flat :named)
 .end
