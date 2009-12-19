@@ -110,6 +110,7 @@ LIBS
     $P0['manifest_includes'] = $P4
     $P5 = split ' ', 'lua/library/sha1.pir lua/library/gl.pir Test/More.pir'
     $P0['manifest_excludes'] = $P5
+    $P0['doc_files'] = 'README'
 
     .tailcall setup(args :flat, $P0 :flat :named)
 .end
