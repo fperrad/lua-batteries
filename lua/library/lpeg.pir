@@ -556,7 +556,7 @@ NOT YET IMPLEMENTED.
 
 =cut
 
-.sub '__len' :method
+.sub '__len' :method :nsentry
     .param pmc patt
     ($P1, $P0) = getpatt(1, patt)
     $I1 = $P0
@@ -579,7 +579,7 @@ NOT YET IMPLEMENTED.
 
 =cut
 
-.sub '__unm' :method
+.sub '__unm' :method :nsentry
     .param pmc patt
     ($P1, $P0) = getpatt(1, patt)
     $I1 = $P0
@@ -606,7 +606,7 @@ NOT YET IMPLEMENTED.
 
 =cut
 
-.sub '__add' :method
+.sub '__add' :method :nsentry
     .param pmc patt1
     .param pmc patt2
     $P1 = getpatt(1, patt1)
@@ -628,7 +628,7 @@ NOT YET IMPLEMENTED.
 
 =cut
 
-.sub '__sub' :method
+.sub '__sub' :method :nsentry
     .param pmc patt1
     .param pmc patt2
     $P1 = getpatt(1, patt1)
@@ -651,7 +651,7 @@ NOT YET IMPLEMENTED.
 
 =cut
 
-.sub '__mul' :method
+.sub '__mul' :method :nsentry
     .param pmc patt1
     .param pmc patt2
     $P1 = getpatt(1, patt1)
@@ -682,7 +682,7 @@ NOT YET IMPLEMENTED.
 
 =cut
 
-.sub '__pow' :method
+.sub '__pow' :method :nsentry
     .param pmc patt
     .param pmc n
     $P1 = getpatt(1, patt)
@@ -995,7 +995,7 @@ NOT YET IMPLEMENTED (see capture_aux).
 
 =cut
 
-.sub '__div' :method
+.sub '__div' :method :nsentry
     .param pmc patt
     .param pmc arg
     $I0 = isa arg, 'LuaClosure'
