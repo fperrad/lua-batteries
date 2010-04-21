@@ -1,5 +1,5 @@
 #! /usr/bin/lua
--- Copyright (C) 2009, Parrot Fondation.
+-- Copyright (C) 2009-2010, Parrot Fondation.
 
 --[[
 
@@ -107,10 +107,11 @@ n = bc.pow(2, 3)
 type_ok( n, 'userdata', "bc.pow ()" )
 is(tostring(n), '8' )
 
-a = bc.number(2)
-n = a ^ 3
-type_ok( n, 'userdata', "bc.__pow" )
-is(tostring(n), '8' )
+skip("pow not longer a VTABLE", 2)
+--a = bc.number(2)
+--n = a ^ 3
+--type_ok( n, 'userdata', "bc.__pow" )
+--is(tostring(n), '8' )
 
 todo( "sqrt not implemented with BigNum", 2 )
 n = bc.sqrt(4)
