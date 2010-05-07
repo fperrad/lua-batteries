@@ -1,5 +1,5 @@
 #! /usr/bin/lua
--- Copyright (C) 2009, Parrot Fondation.
+-- Copyright (C) 2009-2010, Parrot Fondation.
 
 --[[
 
@@ -19,7 +19,7 @@ Tests LuaZlib
 
 require 'Test.More'
 
-plan(2)
+plan(4)
 
 if not require_ok 'zlib' then
     skip_rest "no lib"
@@ -27,6 +27,13 @@ if not require_ok 'zlib' then
 end
 
 is( zlib._VERSION, "LuaZlib 1.0.0", "_VERSION" )
+
+local data = "message"
+
+local compressed = zlib.compress(data)
+type_ok( compressed, "string", "compress" )
+
+is( zlib.uncompress(compressed), data, "uncompress" )
 
 -- Local Variables:
 --   mode: lua

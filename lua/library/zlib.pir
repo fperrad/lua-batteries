@@ -1,4 +1,4 @@
-# Copyright (C) 2009, Parrot Foundation.
+# Copyright (C) 2009-2010, Parrot Foundation.
 # $Id$
 
 =head1 LuaZlib
@@ -28,7 +28,7 @@ See original on L<http://luaforge.net/projects/luazlib/>
 .end
 
 .sub 'luaopen_zlib'
-
+    $P0 = loadlib 'gziphandle'
 #    print "luaopen_zlib\n"
 
     .local pmc _lua__GLOBAL
@@ -75,7 +75,8 @@ LIST
     .param pmc extra :slurpy
     .local pmc res
     $S1 = lua_checkstring(1, src)
-
+    $P0 = new 'GzipHandle'
+    $S0 = $P0.'compress'($S1)
     new res, 'LuaString'
     set res, $S0
     .return (res)
@@ -91,7 +92,8 @@ LIST
     .param pmc extra :slurpy
     .local pmc res
     $S1 = lua_checkstring(1, src)
-
+    $P0 = new 'GzipHandle'
+    $S0 = $P0.'uncompress'($S1)
     new res, 'LuaString'
     set res, $S0
     .return (res)
@@ -105,12 +107,7 @@ LIST
 .sub 'gzuncompress'
     .param pmc src
     .param pmc extra :slurpy
-    .local pmc res
-    $S1 = lua_checkstring(1, src)
-
-    new res, 'LuaString'
-    set res, $S0
-    .return (res)
+    .tailcall uncompress(src)
 .end
 
 
