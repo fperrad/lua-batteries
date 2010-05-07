@@ -69,7 +69,7 @@ LIST
   L1:
     unless $P0 goto L2
     $S0 = shift $P0
-    upcase $S0
+    $S0 = upcase $S0
     $I0 = exists gl_str[$S0]
     if $I0 goto L3
     lua_error(err_msg)
