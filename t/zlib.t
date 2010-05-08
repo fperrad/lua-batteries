@@ -28,10 +28,14 @@ end
 
 is( zlib._VERSION, "LuaZlib 1.0.0", "_VERSION" )
 
-local data = "message"
+local f = io.open 't/zlib.t'
+local data = f:read '*a'
+f:close()
 
 local compressed = zlib.compress(data)
 type_ok( compressed, "string", "compress" )
+diag( string.format( "rate %2.2f%%", 100 * compressed:len() / data:len() ) )
+ok( compressed:len() < data:len() )
 
 is( zlib.uncompress(compressed), data, "uncompress" )
 
