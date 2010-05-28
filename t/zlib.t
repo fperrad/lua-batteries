@@ -19,7 +19,7 @@ Tests LuaZlib
 
 require 'Test.More'
 
-plan(4)
+plan(5)
 
 if not require_ok 'zlib' then
     skip_rest "no lib"
