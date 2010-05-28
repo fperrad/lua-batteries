@@ -18,6 +18,10 @@ multiple precision arithmetic library), see F<src/pmc/bignum.pmc>.
 
 .HLL 'lua'
 .loadlib 'lua_group'
+.loadlib 'io_ops'
+.loadlib 'sys_ops'
+.loadlib 'math_ops'
+.loadlib 'trans_ops'
 .namespace [ 'bc' ]
 
 .sub '__onload' :anon :load

@@ -105,6 +105,8 @@ All functions are registered inside a table C<struct>.
 
 .HLL 'lua'
 .loadlib 'lua_group'
+.loadlib 'io_ops'
+.loadlib 'sys_ops'
 .namespace [ 'struct' ]
 
 .sub '__onload' :anon :load

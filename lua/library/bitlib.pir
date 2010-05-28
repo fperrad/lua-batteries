@@ -20,6 +20,11 @@ that can be used in bitwise operations, and the following functions:
 
 .HLL 'lua'
 .loadlib 'lua_group'
+.loadlib 'io_ops'
+.loadlib 'sys_ops'
+.loadlib 'math_ops'
+.loadlib 'trans_ops'
+.loadlib 'bit_ops'
 .namespace [ 'bitlib' ]
 
 .sub '__onload' :anon :load

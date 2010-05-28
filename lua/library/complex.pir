@@ -17,6 +17,9 @@ This implementation is based on F<src/pmc/complex.pmc>.
 
 .HLL 'lua'
 .loadlib 'lua_group'
+.loadlib 'io_ops'
+.loadlib 'sys_ops'
+.loadlib 'trans_ops'
 .namespace [ 'complex' ]
 
 .sub '__onload' :anon :load

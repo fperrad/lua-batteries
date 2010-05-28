@@ -20,6 +20,8 @@ see F<runtime/parrot/library/OpenGL.pir>.
 
 .HLL 'lua'
 .loadlib 'lua_group'
+.loadlib 'io_ops'
+.loadlib 'sys_ops'
 .namespace [ 'glut' ]
 
 .sub '__onload' :anon :load

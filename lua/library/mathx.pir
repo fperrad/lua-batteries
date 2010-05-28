@@ -15,6 +15,10 @@ See original on L<http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/#lmathx>.
 
 .HLL 'lua'
 .loadlib 'lua_group'
+.loadlib 'io_ops'
+.loadlib 'sys_ops'
+.loadlib 'math_ops'
+.loadlib 'trans_ops'
 .namespace [ 'mathx' ]
 
 .sub '__onload' :anon :load

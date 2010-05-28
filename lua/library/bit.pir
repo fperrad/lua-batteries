@@ -17,6 +17,11 @@ See original on L<http://bitop.luajit.org/>
 
 .HLL 'lua'
 .loadlib 'lua_group'
+.loadlib 'io_ops'
+.loadlib 'sys_ops'
+.loadlib 'math_ops'
+.loadlib 'trans_ops'
+.loadlib 'bit_ops'
 .namespace [ 'bit' ]
 
 .sub '__onload' :anon :load
