@@ -89,8 +89,11 @@ is( tostring(z:exp()), '-13.1288-15.2008i', "function exp" )
 is( tostring(z:log()), '1.60944+0.927295i', "function log" )
 
 w = complex.new(2, 1)
-todo( "pow not longer a VTABLE", 1 )
-is( tostring(z:pow(w)), '-9.38086-3.1341i', "function pow" )
+if true then
+    skip( "pow not longer a VTABLE", 1 )
+else
+    is( tostring(z:pow(w)), '-9.38086-3.1341i', "function pow" )
+end
 
 is( tostring(z:sin()), '3.85374-27.0168i', "function sin" )
 
