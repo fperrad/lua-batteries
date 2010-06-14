@@ -131,9 +131,11 @@ not LuaGL
     $P0 = _lua__GLOBAL[funcname]
     $I0 = lua_isfunction($P0)
     if $I0 goto L2
-    printerr "Script error: cannot find "
-    printerr funcname
-    printerr " function.\n\n"
+    .local pmc stderr
+    stderr = getstderr
+    print stderr, "Script error: cannot find "
+    print stderr, funcname
+    print stderr, " function.\n\n"
   L2:
     push_eh _handler
     $P0()
@@ -144,9 +146,10 @@ not LuaGL
     .local string s
     .get_results (e)
     s = e
-    printerr "Error running lua script:\n\n  "
-    printerr s
-    printerr " \n\n"
+    stderr = getstderr
+    print stderr, "Error running lua script:\n\n  "
+    print stderr, s
+    print stderr, " \n\n"
 .end
 
 
@@ -173,9 +176,11 @@ not LuaGL
     $P0 = _lua__GLOBAL[funcname]
     $I0 = lua_isfunction($P0)
     if $I0 goto L2
-    printerr "Script error: cannot find "
-    printerr funcname
-    printerr " function.\n\n"
+    .local pmc stderr
+    stderr = getstderr
+    print stderr, "Script error: cannot find "
+    print stderr, funcname
+    print stderr, " function.\n\n"
   L2:
     push_eh _handler
     $P0()
@@ -186,9 +191,10 @@ not LuaGL
     .local string s
     .get_results (e)
     s = e
-    printerr "Error running lua script:\n\n  "
-    printerr s
-    printerr " \n\n"
+    stderr = getstderr
+    print stderr, "Error running lua script:\n\n  "
+    print stderr, s
+    print stderr, " \n\n"
 .end
 
 
@@ -265,9 +271,11 @@ not LuaGL
     $P0 = _lua__GLOBAL[funcname]
     $I0 = lua_isfunction($P0)
     if $I0 goto L2
-    printerr "Script error: cannot find "
-    printerr funcname
-    printerr " function.\n\n"
+    .local pmc stderr
+    stderr = getstderr
+    print stderr, "Script error: cannot find "
+    print stderr, funcname
+    print stderr, " function.\n\n"
   L2:
     new $P1, 'LuaNumber'
     set $P1, key
@@ -284,9 +292,10 @@ not LuaGL
     .local string s
     .get_results (e)
     s = e
-    printerr "Error running lua script:\n\n  "
-    printerr s
-    printerr " \n\n"
+    stderr = getstderr
+    print stderr, "Error running lua script:\n\n  "
+    print stderr, s
+    print stderr, " \n\n"
 .end
 
 
@@ -335,9 +344,11 @@ not LuaGL
     $P0 = _lua__GLOBAL[funcname]
     $I0 = lua_isfunction($P0)
     if $I0 goto L2
-    printerr "Script error: cannot find "
-    printerr funcname
-    printerr " function.\n\n"
+    .local pmc stderr
+    stderr = getstderr
+    print stderr, "Script error: cannot find "
+    print stderr, funcname
+    print stderr, " function.\n\n"
   L2:
     new $P1, 'LuaNumber'
     set $P1, width
@@ -352,9 +363,10 @@ not LuaGL
     .local string s
     .get_results (e)
     s = e
-    printerr "Error running lua script:\n\n  "
-    printerr s
-    printerr " \n\n"
+    stderr = getstderr
+    print stderr, "Error running lua script:\n\n  "
+    print stderr, s
+    print stderr, " \n\n"
 .end
 
 =item C<glut.SwapBuffers ()>
