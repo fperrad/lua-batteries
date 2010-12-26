@@ -1068,9 +1068,9 @@ NOT YET IMPLEMENTED.
     $P2 = shift $P0
     $P1[0] = $I0
     $S1 = sprintf "%02d: ", $P1
-    concat $S0, $S1
+    $S0 = concat $S0, $S1
     $S2 = $P2
-    concat $S0, $S2
+    $S0 = concat $S0, $S2
     inc $I0
     goto L1
   L2:
@@ -1162,7 +1162,7 @@ LIST
     .local pmc code
     code = getattribute self, 'code'
     $S0 = $P0[code]
-    concat $S0, " \n"
+    $S0 = concat $S0, " \n"
     .return ($S0)
 .end
 

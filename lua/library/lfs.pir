@@ -233,7 +233,7 @@ optimal file system I/O blocksize; (Unix only)
     new nil, 'LuaNil'
     new msg, 'LuaString'
     $S0 = concat "cannot obtain information from file `", $S0
-    $S0 = concat "'"
+    $S0 = concat $S0, "'"
     set msg, $S0
     .return (nil, msg)
 .endm
@@ -430,9 +430,9 @@ Returns C<true> in case of success or C<nil> plus an error string.
     new nil, 'LuaNil'
     new msg, 'LuaString'
     $S0 = concat "Unable to change working directory to '", $S0
-    $S0 = concat "'\n"
-    $S0 = concat s
-    $S0 = concat "\n"
+    $S0 = concat $S0, "'\n"
+    $S0 = concat $S0, s
+    $S0 = concat $S0, "\n"
     set msg, $S0
     .return (nil, msg)
 .end
