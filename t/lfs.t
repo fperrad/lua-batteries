@@ -37,7 +37,7 @@ is( lfs.chdir('..'), true )
 
 local r, msg = lfs.chdir("bad_dir")
 is( r, nil, "lfs.chdir (bad)" )
-is( msg, "Unable to change working directory to 'bad_dir'\nNo such file or directory\n" )
+is( msg, "Unable to change working directory to 'bad_dir'\nchdir failed: No such file or directory\n" )
 
 lfs.rmdir('xpto')
 is( lfs.mkdir('xpto'), true, "lfs.mkdir" )
@@ -54,7 +54,7 @@ end
 is( str, '...', "lfs.dir" )
 
 error_like(function () lfs.dir('bad_dir') end,
-           "cannot open bad_dir: No such file or directory",
+           "No such file or directory",
            "lfs.dir (bad)")
 
 is( lfs.rmdir('xpto'), true, "lfs.rmdir" )
@@ -62,7 +62,7 @@ is( lfs.chdir('xpto'), nil )
 
 local r, msg = lfs.rmdir('xpto')
 is( r, nil, "lfs.rmdir (not exists)" )
-is( msg, "No such file or directory" )
+like( msg, "No such file or directory" )
 
 os.remove('file.txt')
 f = io.open('file.txt', 'w')
