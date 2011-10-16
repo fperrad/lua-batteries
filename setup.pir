@@ -1,5 +1,5 @@
 #!/usr/bin/env parrot
-# Copyright (C) 2009, Parrot Foundation.
+# Copyright (C) 2009-2011, Parrot Foundation.
 
 =head1 NAME
 
@@ -44,7 +44,6 @@ No Configure step, no Makefile generated.
 
     # build
     $P1 = new 'Hash'
-    $P1['lua/library/gl.pir'] = 'lua/library/gl.lua'
     $P1['Test/More.pir'] = 'Test/More.lua'
     $P0['pir_lua'] = $P1
 
@@ -56,9 +55,6 @@ No Configure step, no Makefile generated.
     $P2['lua/library/bit.pbc'] = 'lua/library/bit.pir'
     $P2['lua/library/bitlib.pbc'] = 'lua/library/bitlib.pir'
     $P2['lua/library/complex.pbc'] = 'lua/library/complex.pir'
-    $P2['lua/library/gl.pbc'] = 'lua/library/gl.pir'
-    $P2['lua/library/gl_binding.pbc'] = 'lua/library/gl_binding.pir'
-    $P2['lua/library/glut.pbc'] = 'lua/library/glut.pir'
     $P2['lua/library/lfs.pbc'] = 'lua/library/lfs.pir'
     $P2['lua/library/lpeg.pbc'] = 'lua/library/lpeg.pir'
     $P2['lua/library/markdown.pbc'] = 'lua/library/markdown.pir'
@@ -88,9 +84,6 @@ lua/library/bc.pbc
 lua/library/bit.pbc
 lua/library/bitlib.pbc
 lua/library/complex.pbc
-lua/library/gl.pbc
-lua/library/gl_binding.pbc
-lua/library/glut.pbc
 lua/library/lfs.pbc
 lua/library/lpeg.pbc
 lua/library/markdown.pbc
@@ -106,9 +99,9 @@ LIBS
     $P0['inst_lang'] = $P3
 
     # dist
-    $P4 = split ' ', 'lua/library/gl.lua Test/More.lua'
+    $P4 = split ' ', 'Test/More.lua'
     $P0['manifest_includes'] = $P4
-    $P5 = split ' ', 'lua/library/sha1.pir lua/library/gl.pir Test/More.pir'
+    $P5 = split ' ', 'lua/library/sha1.pir Test/More.pir'
     $P0['manifest_excludes'] = $P5
     $P0['doc_files'] = 'README'
 
