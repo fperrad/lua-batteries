@@ -1,4 +1,4 @@
-# Copyright (C) 2008-2009, Parrot Foundation.
+# Copyright (C) 2008-2011, Parrot Foundation.
 # $Id$
 
 =head1 random library
@@ -141,7 +141,7 @@ LIST
     .param pmc extra :slurpy
     .local pmc res
     $P1 = lua_checkudata(1, c, MYTYPE)
-    $I1 = get_addr $P1
+    $I1 = get_id $P1
     new $P0, 'FixedPMCArray'
     set $P0, 2
     $P0[0] = MYTYPE
