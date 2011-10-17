@@ -183,12 +183,11 @@ LIST
     .param pmc extra :slurpy
     .local pmc res
     $P1 = lua_checkudata(1, c, MYTYPE)
-    $I1 = get_id $P1
-    new $P0, 'FixedPMCArray'
-    set $P0, 2
-    $P0[0] = MYTYPE
-    $P0[1] = $I1
-    $S0 = sprintf '%s %08p', $P0
+    $S0 = MYTYPE
+    $S0 = concat $S0, ' '
+    $S1 = c
+    $S1 = substr $S1, 10, 8
+    $S0 = concat $S0, $S1
     new res, 'LuaString'
     set res, $S0
     .return (res)
